@@ -1,5 +1,5 @@
 print('       **bienvenidos a la calculadora de genaro**')
-
+#empezar el ciclo completo
 while True:
     print('''
         ---------------------------------------------
@@ -12,14 +12,16 @@ while True:
         ---------
         4- division
          ''')
+    #determina la operacion a realizar
     operacion = int(input("""        ingresa el numero de la operacion que quieres realizar o
         presiona 0 para salir: """))
+    #si presionan 0 rompen el ciclo
     if operacion == 0:
         break
-    
+    #solicita las cantidades a operar
     uno = int(input("introduce el primer numero: "))
     dos = int(input("introduce el segundo numero: "))
-
+    #funciones que ejecutan las operaciones
     def suma(primero, segundo):
         resultado = primero + segundo
         print("el resultado es ", resultado)
@@ -40,6 +42,7 @@ while True:
         print("""------esa opción no esta en mis posibilidades :(--------
                  ------vuelve a intentarlo
                     """)
+   #comparan la operacion seleccionada
     elif operacion == 1:
         suma(uno, dos)
         
@@ -52,7 +55,7 @@ while True:
     elif operacion == 4:
         division(uno, dos)
         
-    
+    #terminar o volver a iniciar el ciclo
     opcion = input("deseas continuar? ")
     
     if opcion != "si" :
